@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-
+{# using template inheritence #}
+{# this block title will replace the block title (one on the top left on window tab) #}
 {% block title %}Register{% endblock %}
 
 {% block content %}
@@ -33,9 +34,22 @@
 {{ form.password(class="form-control") }}
 
 {% for error in form.password.errors %}
-<span style="color:red">{{ error }}</span>
+    <span style="color:red">{{ error }}</span>
 {% endfor %}
 </div>
+{# since this is jinja template this is how to comment #}
+{# adding conform password field #}
+
+
+<div class="form-group">
+{{ form.confirm_password.label }}
+{{ form.confirm_password(class="form-control") }}
+
+{% for error in form.confirm_password.errors %}
+    <span style="color:red">{{ error }}</span>
+{% endfor %}
+</div>
+
 
 {{ form.submit(class="btn btn-primary") }}
 
