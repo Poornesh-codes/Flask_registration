@@ -22,6 +22,7 @@ with app.app_context():
 #creating routes and views (home,about and register)
 
 #home route used datetime module to show current date and time something like 2026 03 16 14:30:46 on '\' or home page
+# @app.route tells Flask which url should start the function
 @app.route("/")
 def home():
     now = datetime.now()
@@ -39,7 +40,7 @@ def about():
 def register():
     #creating form
     form = RegisterForm()
-    #checks if form s valid and submitted
+    #checks if form s valid and submitted And all validators are passed
     if form.validate_on_submit():
         user = User(
             username=form.username.data,
@@ -66,7 +67,7 @@ def register():
 @app.route("/success/<username>")
 def registration_success(username):
     return render_template("confirm.html", username=username)
-#running the app
+
 
 if __name__ == "__main__":
     app.run(debug=True)
