@@ -1,121 +1,28 @@
-# Flask Registration System
+# Flask registration app
+this is simple registration form tht takes a username,email,and pass word checks if they are vald and saves them to database
 
-A simple user registration web application built using **Flask**, **Flask-WTF**, and **Flask-SQLAlchemy**.  
-This project demonstrates form validation, database storage, and template inheritance.
+## what i learned
+- @app.route connects url to a python functions. it triggers the function when the url is called.
+- render_template finds the html file and then passes variables into  it 
+- validate_on_submit() -  when i submit, the parameters it validates if all field are macthing correctly
+- db.session.add() keeps it ready to add the data into the sqlite db and db.session.commit() commits the changes to the database
+- form.hidden_tag() - it generates a a random key along with the form , while submittion of form it checks for if the key matches and then accepts the form
+-  using bootstrap for nav 
+## challenges i faced
+- form.hidden_tag() was not added ,the form was not submitting
+- email-validator was needed to install separately
 
----
-
-## Features
-
-- User registration form
-- Email and password validation
-- Flash messages for errors and success
-- SQLite database for storing users
-- Bootstrap styled UI
-- Template inheritance using Jinja2
-
----
-
-## Technologies Used
-
-- Python
-- Flask
-- Flask-WTF
-- Flask-SQLAlchemy
-- SQLite
-- Bootstrap
-
----
-
-## Project Structure
-
-```
-flask_registration/
-│
-├── app.py
-├── forms.py
-├── models.py
-├── requirements.txt
-│
-├── templates/
-│   ├── base.html
-│   ├── home.html
-│   ├── about.html
-│   ├── register.html
-│   └── confirm.html
-│
-└── static/
-    ├── style.css
-    └── flask.jpg
-```
-
----
-
-## Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/flask_registration.git
-cd flask_registration
-```
-
-Create a virtual environment:
-
-```bash
-python -m venv venv
-```
-
-Activate the virtual environment:
-
-Windows:
-
-```bash
-venv\Scripts\activate
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## Run the Application
-
-Start the Flask server:
-
-```bash
+## testing
+- length of password is short
+![length of password](<Screenshot 2026-04-20 120227.png>)
+- confirm password did not match with password
+![confirm password](<Screenshot 2026-04-20 120256.png>)
+- not a valid email 
+![invalid](<Screenshot 2026-04-20 120449.png>)
+![not an email](<Screenshot 2026-04-20 120524.png>)
+- if everything is valid
+![everything right](<Screenshot 2026-04-20 120401.png>)
+## how to run 
+pip install requirements.txt
 python app.py
-```
 
-Open your browser and go to:
-
-```
-http://127.0.0.1:5000
-```
-
----
-
-## Database
-
-This project uses **SQLite** to store registered users.  
-The database file (`users.db`) is automatically created when the application runs for the first time.
-(can be found in the instance folder)
-
----
-
-## Future Improvements
-
-- User login system
-- Password hashing
-- Email uniqueness validation
-- User dashboard
-- Deployment to cloud platforms
-
----
-
-## License
-
-This project is for educational purposes.
