@@ -1,32 +1,26 @@
+/* background colour whole page */
 body {
 font-family: 'Segoe UI';
 background-color: #eef2f7;
 color: #333333;
 
 }
-nav {
-background-color: #4ca6d6;
-padding: 15px 0;
-}
-nav a {
-color: #99d8e8;
-text-decoration: none;
-padding: 10px 20px;
-display: inline-block;
-font-weight: bold;
-transition: background-color 0.3s ease;
-}
+/* i used bootstrp for nav*/
 
+
+/* blue heading*/
 h1 {
 color: #345bdb;
 text-align: center;
 
 }
+/* paragraph spacing */
 p {
 margin-bottom: 15px;
 }
+/* footer with line aboe it */
 footer {
 text-align: center;
 color: #7f8c8d;
-border-top: 1px solid #ddd;
+border-top: 1px solid #230404;
 }
