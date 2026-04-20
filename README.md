@@ -23,6 +23,9 @@ this is simple registration form tht takes a username,email,and pass word checks
 - if everything is valid
 ![everything right](<Screenshot 2026-04-20 120401.png>)
 ## how to run 
+```bash
 pip install requirements.txt
+```
+```bash
 python app.py
-
+```
